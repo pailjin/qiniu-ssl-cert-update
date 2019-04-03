@@ -46,8 +46,8 @@ print_r($addsslcertRet);
 
 
 // $todoDomain = $argv[1];
-$todoCertId = $addsslcertRet->certID;
-
+// $todoCertId = $addsslcertRet->certID;
+$todoCertId = $addsslcertRet['certID'];
 // # # 3/ 更新域名证书
 
 $domainName = $todoDomain;//'qinius.meiriyouke.cn';//$argv[2];
