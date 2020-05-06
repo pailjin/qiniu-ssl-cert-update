@@ -18,11 +18,21 @@ php script for update qiniu https ssl cert
 
 生成证书并上传/更新七牛
 
-# todo支持：
+# dns支持：
 
 let's encrypt生成证书需要域名指向“当前正在操作的”服务器。可以使用dnspod等域名服务器的api去自动切换域名指向自有服务器和七牛云服务器。
 
 这样才可以使用crontab定期执行，证书生成会失败
+
+最新版本，已经增加百度bcd域名服务的api去切换域名指向，达到自动修改证书的动作。
+
+详细参看“meiriyouke.updateonly-changeDNS.sh” 这个脚本可以加到crontab中。
+
+备注：
+
+1/ 需要baidu云的ak和sk，以及更新下您想修改的域名.详见bce-node/bcdclient2n.meiriyouke.cn.js 和bce-node/bcdclient2qiniu.js中中文备注的需要替换的字段内容。
+
+2/ 由于使用了node，请安装node环境。我自己测试的是node v12.x
 
 # 使用说明
 
@@ -62,6 +72,3 @@ php-curl
 nginx
 
 cerbot (let's encrypt)
-
-
-
