@@ -14,6 +14,8 @@ php script for update qiniu https ssl cert
 
 所以写了个脚本“半自动”的形式更新七牛证书。
 
+全自动的模式，请参看下面“dns支持”。
+
 # 支持特性：
 
 生成证书并上传/更新七牛
